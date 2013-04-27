@@ -1,0 +1,52 @@
+<div id="wraptop2">
+    <div class="wrap">
+      <%= render 'header' %>
+      <div>
+        <%= render 'searchform' %>
+      </div>
+      <div class="main">
+        <div class="colmask">
+          <div class="colleft">
+            <div class="leftPanel"></div>
+            <div class="centerPanel" style="min-height:570px !important;">
+              <% if @error %>
+              <div style="background:red;border:solid;color:blue;"><%= @error %></div>
+              <% end %>
+              <div class="resultPanel">
+                <div class="number-of-jobs"><%= @totalJobs %></div>
+                <h1 class="h1tag"><%= @prettySearch %></h1>
+                <div class="resultsInfo" style="margin-bottom:.4em;margin-top:4px;">
+                  <div class="">Page 1 / <%= @pages %></div>
+                  <%if @jobs
+                   @jobs.each do |job| %>
+                    <div class="searchResult">
+                      <div><a class="joblink" href=<%= job["JobDetailsURL"] %> target="betterjobs_jobwin" rel="nofollow" onclick="javascript:trackView();"><%= job["JobTitle"] %></a></div>
+                      <div>
+                        <span class="cmpname"><%= job["Company"] %></span>
+                        <span class="vbar">•</span>
+                        <span><a class="jobInfoLink" href="http://www.betterjobs.com/allJobs/i-TSymmetry/cy-us" rel="nofollow">All jobs »</a></span>
+                        <span class="vbar">|</span>
+                        <span class="locationMsg"><%= job["Location"] %></span>
+                      </div>
+                      <div class="hlt"><%= job["Abstract"][0..200] %>...</div>
+                      <div class="sourceMsg">
+                        <span>from <%= job["Source"] %></span>
+                        <span class="vbar">|</span>
+                        <span><%= job["PostedDate"] %></span>
+                        <span class="vbar hide-mobile">|</span>
+                        <span class="shareLink hide-mobile">Share</span>
+                        <span class="vbar hide-mobile">|</span>
+                        <span class="saveLink">Save</span>
+                      </div>
+                    </div>
+                  <% end
+                  end %>
+                </div>
+              </div>
+              <div class="pagingPanel"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+      

@@ -1,0 +1,18 @@
+<div id="header">
+	<div class="logo">
+	  <%= link_to image_tag "logo.png", {title:"Find a Job on Better Jobs", alt:"Find a Job on Better Jobs", height:"40px", width:"256px"} %>
+	</div>
+	<div class="topmenu">
+	  <ul>
+	  <% if true %>
+	    <li><a id="various1" href="#signupmodal">Create account</a></li>
+	    <li class="case"><a href="doViewProfile">My Better Jobs</a></li>
+	    <li class="lock"><a id="loginAnchor" href="doLogin" rel="nofollow">Sign In</a></li>
+	  <% else %>
+	    <li class="user-name"><s:property value="%{ #userName }" /></li>
+	    <li class="case"><a href="doViewProfile">My Better Jobs</a></li>
+	    <li class="lock"><a id="loginAnchor" href="doUserLogout" rel="nofollow">Log Out</a></li>
+	  <% end %>
+	  </ul>   
+	</div>
+</div>

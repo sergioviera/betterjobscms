@@ -1,0 +1,56 @@
+*{margin:0; padding:0}
+header{display:block;height:250px;width:600px;margin:0 auto}
+header .logo{margin:0px 25px;width:240px;height:104px}
+#country-select{position:relative;width:400px}
+#csbox .arrow{background:url('../assets/arrow.png') no-repeat right;position:absolute;margin:0 0 0 117px;z-index:101;width:27px;height:52px;cursor:pointer;z-index:1000}
+#country-select .wherefield{width:175px;height:25px;border:1px solid #ccc;background:#ffffff;position:relative;margin:0 0 0 90px;z-index:102 !important;display:block;padding:2px 4px;font-size:14px;top:-52px;width:295px !important;left:87px;-webkit-border-bottom-left-radius:0px !important;-webkit-border-top-left-radius:0px !important;-moz-border-bottom-left-radius:0px !important;-moz-border-top-left-radius:0px !important;border-bottom-left-radius:0px !important;border-top-left-radius:0px !important}
+#country-selected{z-index:1000;float:left;position:relative;height:43px;padding:3px 3px 3px 10px;top:1px;-webkit-border-bottom-left-radius:5px;-webkit-border-top-left-radius:5px;-moz-border-bottom-left-radius:5px;-moz-border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-left-radius:5px;cursor:pointer}
+#target li{cursor:pointer}
+/* rough form styles for when JS is disabled */
+#country-select form{width:600px;padding:0}
+#country-select select,#country-select input{display:inline;padding:0;margin:0}
+/* JS-created definition list */
+#country-select .wherefield{left:24px;top:-1px}
+.dropdown>dt{float:left}
+.dropdown dd{position:relative}
+#countrymodal div, .dropdown div{text-decoration:none;outline:0;font:14px Arial, Helvetica, sans-serif;font-weight:bold;display:block;width:50px;overflow:hidden}
+.dropdown dt div{background:#fff;border:1px solid #888;padding:3px 5px 4px 5px;color:#000}
+.dropdown dt div.active{background:#fff;color:#000}
+.dropdown dd ul>li{margin:0 !important}
+#countrymodal ul>li{margin:0 !important;float:left}
+#countrymodal ul,.dropdown dd ul{background:#ededed;border:1px solid #888;color:#C5C0B0;display:none;position:absolute;z-index:999;top:0;left:3px;padding:2px 0 5px 0;list-style:none;border-top:none;margin:0;width:60px;top:50px}
+#countrymodal ul{display:block;width:100%;border:none}
+#fancybox-content>div{overflow:hidden !important}
+#countrymodal ul li div,.dropdown dd ul li div{padding:2px 5px}
+.dropdown dd ul li div span,.dropdown dt div span,#countrymodal ul li div span{float:right;width:20px;height:20px;margin:6px 5px 0 0;background-image:url(../assets/flags.png);background-repeat:no-repeat;cursor:pointer}
+.us div span{background-position:0 0}
+.jp div span{background-position:0 -21px}
+.uk div span{background-position:0 -41px}
+.ru div span{background-position:0 -61px}
+.ca div span{background-position:0 -81px}
+.ch div span{background-position:0 -101px}			
+.fr div span{background-position:0 -122px}
+.in div span{background-position:0 -142px}
+.mx div span{background-position:0 -162px}
+.au div span{background-position:0 -182px}
+.it div span{background-position:0 -203px}
+.es div span{background-position:0 -224px}
+.br div span{background-position:0 -244px}
+.kr div span{background-position:0 -265px}
+.de div span{background-position:0 -285px}
+.nl div span{background-position:0 -306px}
+.pl div span{background-position:0 -326px}
+.ie div span{background-position:0 -346px}
+.ch div span{background-position:0 -366px}
+.dk div span{background-position:0 -386px}
+.ae div span{background-position:0 -406px}
+.ro div span{background-position:0 -426px}
+.at div span{background-position:0 -446px}
+.tr div span{background-position:0 -486px}
+#countrymodal ul li div em,.dropdown dd ul li div em,.dropdown dt div em{font-style:normal;float:left;width:20px;margin:10px 0 0 0;cursor:pointer}
+#countrymodal ul li div em,.dropdown dd ul li div em{color:#000}
+#countrymodal ul li div:hover,.dropdown dd ul li div:hover{background-color:#fff}
+#countrymodal ul li div:hover em,.dropdown dd ul li div:hover em{color:#666}
+.dropdown dt div span{margin-top:12px}
+.dropdown dt div em{margin-top:15px !important}
+#wwlbl_location,#wwlbl_keywords{float:left;margin-top:9px;margin-right:5px}

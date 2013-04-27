@@ -1,0 +1,103 @@
+
+<div id="search2">
+  <div class="wrap">
+<%= form_tag jobs_path, :method => :get do %>
+    <!-- form id="frmSrch" name="frmSrch" action="/search" method="get" -->
+        <ul class="itm">
+          <li class="boxs">
+            <div class="txtlook">Looking For</div>  
+            <div id="wwgrp_keywords" class="wwgrp">
+              <div id="wwctrl_keywords" class="wwctrl">
+                <!-- input type="text" name="k" value="java" id="keywords" class="srch-input searchBox" -->
+                <%= text_field_tag :k, params[:k], {id:"keywords", class:"srch-input searchBox"} %>
+              </div>
+            </div>
+            <div class="txtkey">keywords, job titles, companies, categories, etc.</div> 
+          </li>
+          <li class="boxs">
+            <div class="txtwhere">Where</div>
+            <div class="searchInput ui-widget" style="width:275px;">
+              <div id="wwgrp_location" class="wwgrp">
+                <span id="wwctrl_location" class="wwctrl">
+                  <div id="csbox">  
+                    <div id="country-select">
+                      <section>
+                        <select id="country-options" name="country" style="display:none">
+                          <option selected="selected" value="us">US</option>
+                          <option value="ca">CA</option>
+                          <option value="uk">UK</option>
+                          <option value="in">IN</option>
+                          <option value="mx">MX</option>
+                          <option value="de">DE</option>
+                          <option value="au">AU</option>
+                          <option value="fr">FR</option>
+                          <option value="br">BR</option>
+                          <option value="nl">NL</option>
+                          <option value="jp">JP</option>
+                          <option value="ru">RU</option>
+                          <option value="it">IT</option>
+                          <option value="es">SP</option>
+                          <option value="kr">KR</option>
+                          <option value="pl">PL</option>
+                          <option value="ie">IE</option>
+                          <option value="ch">CH</option>
+                          <option value="dk">DK</option>
+                          <option value="ae">AE</option>
+                          <option value="ro">RO</option>
+                          <option value="at">AT</option>
+                          <option value="tr">TR</option>
+                        </select>
+                        </section>
+                      <div class="arrow active" style="margin-left:64px;"></div>
+                        <dl id="target" class="dropdown">
+                        <dt id="dt-country-selected" class="us">
+                          <div id="country-selected"><span class="flag"></span><em>US</em></div>
+                        </dt>
+                        <dd><ul style="display: none;">
+                          <li class="us"><div><span class="flag"></span><em>US</em></div></li>
+                          <li class="ca"><div><span class="flag"></span><em>CA</em></div></li>
+                          <li class="uk"><div><span class="flag"></span><em>UK</em></div></li>
+                          <li class="pl"><div><span class="flag"></span><em>PL</em></div></li>
+                          <li class="ie"><div><span class="flag"></span><em>IE</em></div></li>
+                          <li class="ch"><div><span class="flag"></span><em>CH</em></div></li>
+                          <li class="dk"><div><span class="flag"></span><em>DK</em></div></li>
+                          <li class="ae"><div><span class="flag"></span><em>AE</em></div></li>
+                          <li class="ro"><div><span class="flag"></span><em>RO</em></div></li>
+                          <li class="at"><div><span class="flag"></span><em>AT</em></div></li>
+                          <li class="it"><div><span class="flag"></span><em>IT</em></div></li>
+                          <li class="nl"><div><span class="flag"></span><em>NL</em></div></li>
+                          <li class="fr"><div><span class="flag"></span><em>FR</em></div></li>
+                          <li class="tr"><div><span class="flag"></span><em>TR</em></div></li>
+                          <li class="more"><div><em><a id="country-selector" href="#countrymodal">MORE</a></em></div></li>
+
+                          <li class="in" style="display:none"><div><span class="flag"></span><em>IN</em></div></li>
+                          <li class="mx" style="display:none"><div><span class="flag"></span><em>MX</em></div></li>
+                          <li class="de" style="display:none"><div><span class="flag"></span><em>DE</em></div></li>
+                          <li class="au" style="display:none"><div><span class="flag"></span><em>AU</em></div></li>
+                          <li class="br" style="display:none"><div><span class="flag"></span><em>BR</em></div></li>
+                          <li class="jp" style="display:none"><div><span class="flag"></span><em>JP</em></div></li>
+                          <li class="ru" style="display:none"><div><span class="flag"></span><em>RU</em></div></li>
+                          <li class="es" style="display:none"><div><span class="flag"></span><em>SP</em></div></li>
+                          <li class="kr" style="display:none"><div><span class="flag"></span><em>KR</em></div></li>
+                        </ul></dd>
+
+                        <!-- input type="text" name="l" value="" id="location" class="srch-input wherefield searchBox ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true" -->
+                        <%= text_field_tag :l, params[:l], {id:"location", class:"srch-input wherefield searchBox ui-autocomplete-input"} %>
+
+                        </dl>
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+                          
+            <div class="txtcity">city, state, zip code</div>
+          </li>
+          <li class="last">
+            <%= image_submit_tag "searchbtn2.png", :name => nil, :alt=>"search now", :title=>"search now", :style=>"border-radius: 3px;" %>
+          </li>
+        </ul>
+    <!-- /form -->
+<% end %>
+  </div>
+</div>
