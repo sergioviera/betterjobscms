@@ -1,7 +1,28 @@
       <div class="main">
         <div class="colmask">
           <div class="colleft">
-            <div class="leftPanel"></div>
+            <div class="leftPanel">
+              <%if @facets
+               @facets.each do |facet| %>
+                <span class="navLink facetTitle" facet="<%= facet['JobSearchRequestParameter'] %>">
+                  <%= image_tag "Minus12.jpg", :alt=>"Hide List", :title=>"Hide List", :height=>"12px", :width=>"12px", :id=>facet['JobSearchRequestParameter']+'-minus' %>
+                  <%= image_tag "Plus12.jpg", :alt=>"Show List", :title=>"Show List", :height=>"12px", :width=>"12px", :id=>facet['JobSearchRequestParameter']+'-plus', :style => "display: none;" %>
+                  <span style="margin-left:4px;"><%= facet['JobSearchRequestParameter'] %></span>
+                </span>
+                <div id="<%= facet['JobSearchRequestParameter'] %>-nav">
+                  <ul class=facet-list>
+                  <!-- write facet data now -->
+                  <% facet['Item'].each do |i| %>
+                    <li>
+                      <a class='navitem' ref='nofollow' href="#"><%= i['DisplayValue'] %></a> 
+                      <span class="navcnt">(<%= i['Count'] %>)</span>
+                    </li>
+                  <% end %>
+                  </ul>
+                </div>
+              <% end
+              end %>
+            </div>
             <div class="centerPanel" style="min-height:570px !important;">
               <% if @error %>
               <div style="background:red;border:solid;color:blue;"><%= @error %></div>
@@ -10,7 +31,7 @@
                 <div class="number-of-jobs"><%= @totalJobs %></div>
                 <h1 class="h1tag"><%= @prettySearch %></h1>
                 <div class="resultsInfo" style="margin-bottom:.4em;margin-top:4px;">
-                  <div class="">Page 1 </div>
+                  <div class="">Page 1 / <%= @pages %></div>
                   <%if @jobs
                    @jobs.each do |job| %>
                     <div class="searchResult">

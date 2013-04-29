@@ -2,18 +2,16 @@ require 'jobAPI'
 
 class JobsController < ApplicationController
   def index
-    puts '***********************************************'
-
     response = JobAPI.get_jobs(params)
 
     case response.code
       when 200
-        puts response.inspect
         apiData = response.parsed_response['ResponseJobSearch']
-
         @pages = apiData['TotalPages']
         @totalJobs = apiData['TotalCount']
-        @jobs = {} #apiData['Results']['JobSearchResult']
+        @jobs = apiData['Results']['JobSearchResult']
+
+        @facets = apiData['Facets']['Facet']
       when 404
         @error = "O noes not found!"
       when 500...600
