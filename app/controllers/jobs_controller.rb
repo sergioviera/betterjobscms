@@ -2,10 +2,13 @@ require 'jobAPI'
 
 class JobsController < ApplicationController
   def index
+    puts '***********************************************'
 
     response = JobAPI.get_jobs(params)
+
     case response.code
       when 200
+        puts response.inspect
         apiData = response.parsed_response['ResponseJobSearch']
 
         @pages = apiData['TotalPages']
@@ -17,7 +20,9 @@ class JobsController < ApplicationController
         @error = "ZOMG ERROR #{response.code}"
     end
 
-    @prettySearch = params[:k] + ' jobs in ' + params[:l]
+    if params[:k] && params[:l]
+      @prettySearch = params[:k] + ' jobs in ' + params[:l]
+    end
 
     respond_to do |format|
       format.html # index.html.erb

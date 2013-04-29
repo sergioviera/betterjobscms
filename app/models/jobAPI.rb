@@ -18,10 +18,10 @@ class JobAPI
   def self.get_jobs(args)
     params = {'DeveloperKey' => '7e389902-c671-4248-b234-728021e753b4',
 #    params = {'DeveloperKey' => '3a8b4813-2447-4d7b-a3c3-c30f66bac033',
-      'Keywords' => 'java',
+      'Keywords' => 'tennis',
 #      'Location' => l,
       'CountryCode' => 'US'}
-
+puts 'tennis'
     if !params[:k].nil?
       if !params[:k].empty?
         params.add( 'Keywords', params[:k] )

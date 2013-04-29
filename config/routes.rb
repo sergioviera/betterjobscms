@@ -9,6 +9,8 @@ Rickrockstar::Application.routes.draw do
   match 'find-me-a-job' => 'static#find-me-a-job'
   match 'privacy' => 'static#privacy'
   match 'terms' => 'static#terms'
+  match 'jobs' => 'jobs#index'
+
   mount Refinery::Core::Engine, :at => '/'
 
   # The priority is based upon order of creation:

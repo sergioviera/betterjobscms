@@ -1,9 +1,3 @@
-<div id="wraptop2">
-    <div class="wrap">
-      <%= render 'header' %>
-      <div>
-        <%= render 'searchform' %>
-      </div>
       <div class="main">
         <div class="colmask">
           <div class="colleft">
@@ -16,7 +10,7 @@
                 <div class="number-of-jobs"><%= @totalJobs %></div>
                 <h1 class="h1tag"><%= @prettySearch %></h1>
                 <div class="resultsInfo" style="margin-bottom:.4em;margin-top:4px;">
-                  <div class="">Page 1 / <%= @pages %></div>
+                  <div class="">Page 1 </div>
                   <%if @jobs
                    @jobs.each do |job| %>
                     <div class="searchResult">
@@ -48,5 +42,4 @@
           </div>
         </div>
       </div>
-  </div>
-      
+
