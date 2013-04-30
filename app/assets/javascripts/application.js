@@ -13,3 +13,47 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+	$( "#location" ).autocomplete({
+		source: function(request, response){	
+			$.ajax({
+                type: "GET",
+                url: "http://dev.betterjobs.com:7777/OrionWeb/doSuggestLocations",
+                data: {
+                    term: request.term,
+                    country: $('#country-options').val()
+                },                dataType: "jsonp",
+                crossDomain: true,
+                cache: false,
+				success: function(data){
+					response( data.suggestions );
+				}
+			});
+		},
+		delay:0,
+		autoFocus:true
+	});
+
+/*$(document).ready(function(){
+    $("#result").html( "starting "+new Date() );
+
+    $.ajax({
+        type: "GET",
+        url: "http://dev.betterjobs.com:7777/OrionWeb/doSuggestLocations",
+        data: { term: "Mia", country: "US" },
+        dataType: "jsonp",
+        crossDomain: true,
+        cache: false,
+        before: function(){
+            $("#result").html( "processing" );
+        },
+        success: function(data){
+            console.log("lalal")
+            $("#result").append("Mia >>"+ data.suggestions[0].label );
+        },
+        error: function(xhr, ajaxOptions, thrownError){
+            $("#result").html( "error: " + xhr.status + "<br>" + thrownError );
+        }
+    });
+})
+*/
