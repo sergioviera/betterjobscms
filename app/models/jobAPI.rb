@@ -21,12 +21,36 @@ class JobAPI
       params['Location'] = args[:l]
     end
 
+    if args[:a]
+      params['City'] = args[:a]
+    end
+
+    if args[:t]
+      params['JobTitle'] = args[:t]
+    end
+
+    if args[:i]
+      params['CompanyName'] = args[:i]
+    end
+
+    if args[:d]
+      params['PostedWithin'] = args[:d]
+    end
+
+    if args[:p]
+      params['PageNumber'] = args[:p]
+    end
+
+    if args[:radius]
+      params['Radius'] = args[:radius]
+    end
+
     if args[:Category]
       params['Category'] = args[:Category]
     end
 
-    if args[:page]
-      params['PageNumber'] = args[:page]
+    if args[:cy]
+      params['CountryCode'] = args[:cy]
     end
 
     get('/getJob', :query => params)

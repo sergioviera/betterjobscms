@@ -11,6 +11,12 @@ class JobsController < ApplicationController
         @totalJobs = apiData['TotalCount']
         @jobs = apiData['Results']['JobSearchResult']
 
+        if params[:p]
+          @pageNbr = params[:p]
+        else
+          @pageNbr = "1"
+        end
+
         @facets = apiData['Facets']['Facet']
       when 404
         @error = "O noes not found!"

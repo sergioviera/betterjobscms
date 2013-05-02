@@ -31,7 +31,7 @@
                 <div class="number-of-jobs"><%= @totalJobs %></div>
                 <h1 class="h1tag"><%= @prettySearch %></h1>
                 <div class="resultsInfo" style="margin-bottom:.4em;margin-top:4px;">
-                  <div class="">Page 1 / <%= @pages %></div>
+                  <div class="">Page <%= @pageNbr %> / <%= @pages %></div>
                   <%if @jobs
                    @jobs.each do |job| %>
                     <div class="searchResult">
