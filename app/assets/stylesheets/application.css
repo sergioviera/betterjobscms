@@ -13,5 +13,6 @@
  */
 #body_content{
 	margin:auto;
-	width:80% !important;
+	padding: 20px;
+	width: 75% !important;
 }
