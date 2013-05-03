@@ -1,0 +1,120 @@
+<html>
+  <head>
+  	<title>Testing new style</title>
+  	<style type="text/css">
+  	body{
+  		font-family:Arial,Helvetica;
+  		font-size:10pt;
+  	}
+  	section.page-section{
+  		width:960px;
+  		margin:auto;
+  	}
+  	#footer-links>ul{
+  		float:left;
+  	}
+  	#footer-links ul li{
+  		list-style-type: none;
+  		border-bottom: solid 1px #555;
+  		color: #777;
+  		padding:5px;
+  		margin-top:10px;
+	}
+  	#footer-links ul li:before{
+  		content:">";
+  		position:relative; 
+  		left:-5px;
+  	}
+  	.clear{
+  		clear:both;
+  	}
+  	#usermenu{
+  		float:right;
+  	}
+  	#usermenu>li{
+  		float:right;
+  		list-style-type: none;
+  		padding:3px;
+  		margin:0 20px;
+  		color:#999;
+  	}
+  	li.button{
+  		color:#555 !important;
+  		background: #999;
+  		border-radius: 3px;
+  	}
+    #search-form input[type="text"]{
+      padding: 7px;
+      width: 340px;
+      margin: 0 15px;
+    }
+    #search-form input[type="submit"]{
+      background: #EC0000;
+      border: solid 1px #960000;
+      color: whitesmoke;
+      padding: 7px 26px;
+      border-radius: 4px;
+    }
+  	</style>
+  </head>
+  <body style="margin:0;padding:0">
+	<nav style="background: #eee;position: fixed;width: 100%;z-index: 1000;">
+	  <section class="page-section">
+	  	<img src="../../assets/images/logo.png">
+	  	<ul id="usermenu">
+	  	  <li class="button">SIGN IN</li>
+	  	  <li>MY BETTER JOBS</li>
+	  	  <li>CREATE ACCOUNT</li>
+	  	</ul>
+	  </section>
+  	</nav>
+  	<div style="height:365px;background: url(../../assets/images/bg1.jpg)">
+	  <section class="page-section">
+      <div>
+        <h1 style="padding: 0;margin: 0;position: relative;top: 151px;color: whitesmoke;text-align: right;width: 100%;float: right;font-size: 24pt;font-weight:normal;">Your <b>Better Jobs</b> Search Starts Here</h1>
+        <div id="search-form" style="position: relative;top: 289px;">
+          <div style="background: #111;opacity: 0.6;height: 76px;"></div>
+          <form style="top: -50px;position: relative;padding: 0 40px">
+            <input type="text">
+            <input type="text">
+            <input type="submit" value="Search Jobs">
+          </form>
+        </div>
+      </div>
+	  </section>
+  	</div>
+	  <section class="page-section" style="height:500px;background:white;">
+	  	Job Results
+	  </section>
+	<div>
+	  <div style="background:#222;">
+	    <section id="footer-links" class="page-section" >
+	      <ul>
+	      	<li>Include Your Jobs</li>
+	      	<li>Find Me a Job</li>
+	      	<li>Better Jobs by State</li>
+	      	<li>Jobs by Category</li>
+	      	<li>Jobs Opportunities by Job Title</li>
+	      	<li>Companies Hiring Now</li>
+	      </ul>
+	      <ul>
+	      	<li>Privacy</li>
+	      	<li>Terms</li>
+	      	<li>Contact Us</li>
+	      </ul>
+	      <ul>
+	      	<li>Sign up for free</li>
+	      	<li>Sign up with Facebook</li>
+	      	<li>Sign up with Linkedin</li>
+	      </ul>
+	      <div class="clear"></div>
+	    </section>
+	</div>
+	  <div style="height:50px;background:#111;">
+	    <section class="page-section" style="color:#333;text-align:center;padding-bottom:80px;">
+	  	  Better jobs Network(c) 2006-2013
+	    </section>
+	</div>
+	</div>
+  </body>
+</html>
