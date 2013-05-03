@@ -11,8 +11,113 @@
  *= require_self
  *= require_tree .
  */
+.body-blog-content,
 #body_content{
 	margin:auto;
 	padding: 20px;
-	width: 75% !important;
+	width: 95% !important;
+	height: 800px;
+	overflow-x: auto;
+}
+.body-blog-content #menu{
+	float: right;
+	width: 25%;
+	border-radius: 5px;
+	border: solid 1px;
+	padding: 10px;
+}
+.body-blog-content #menu h2{
+	margin-bottom: 10px;
+	border-bottom: solid 1px;
+}
+.body-blog-content #menu li{
+	list-style-type: none;
+}
+.body-blog-content #body_content{
+	float: left;
+	width: 70%;
+}
+
+#body_content_left{
+	width: 70%;
+	float: left;
+}
+#body_content_right{
+	float: right;
+	width: 25%;
+	border-radius: 5px;
+	border: solid 1px;
+	padding: 10px;
+}
+#body_content_right h2{
+	margin-top: 15px;
+	margin-bottom: 10px;
+	border-bottom: solid 1px;
+}
+.blog_post{
+	font-size: 12pt;
+	margin: 20px 0;
+}
+.blog_post header,
+#blog_post header{
+	height: auto;
+	margin:0;
+}
+.blog_post .details,
+.blog_post .comment_count{
+	color: #808080;
+	font-size: 9pt;
+}
+.blog_post .tagged{
+	font-weight: bold;
+}
+.blog_post .tagged>a,
+a.tag4{
+	background: #ccc;
+	padding: 3px;
+	border-radius: 2px;
+}
+.blog_post .clearfix{
+	padding:10px 0;
+}
+#blog_posts>li{
+	padding: 5px;
+}
+#show_blog_post>article>p{
+	margin:20px 0;
+	text-align: justify;
+}
+#next_prev_article>a{
+	background: #ccc;
+}
+#next_prev_article>a:hover{
+	background: #aaa;
+}
+#comments{
+	width: 65%;
+	margin: auto;
+	background: #eee;
+}
+#comments h2{
+	margin-top: 25px;
+}
+form.new_comment{
+	width: 390px;
+	margin: auto;
+}
+.field{
+	padding: 10px 0;
+}
+.field>label{
+	display: block;
+    float: left;
+    width: 350px;
+}
+.field>textarea,
+.field>input[type="email"],
+.field>input[type="text"]{
+	width:100%;
+}
+.form-actions{
+	text-align: center;
 }

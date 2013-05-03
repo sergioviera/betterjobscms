@@ -1,19 +1,2 @@
-<!DOCTYPE html>
-<%= render '/refinery/html_tag' %>
-  <% site_bar = render('/refinery/site_bar', :head => true) -%>
-  <%= render '/refinery/head' %>
-  <body>
-    <%= site_bar -%>
-    <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
-
-    <div id="wraptop2">
-      <div class="wrap">
-        <%= render '/refinery/header' -%>
-        <%= render '/jobs/searchform' -%>
-        <%= yield %>
-      </div>
-      <%= render '/refinery/footer' -%>
-    </div>
-    <%= render '/refinery/javascripts' %>
-  </body>
-</html>
+<%= render '/refinery/head' %>
+<%= yield %>

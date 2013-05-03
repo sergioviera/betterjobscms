@@ -53,5 +53,5 @@ gem 'refinerycms-i18n', '~> 2.0.0'
 #  gem 'refinerycms-search', '~> 2.0.0'
 #  gem 'refinerycms-page-images', '~> 2.0.0'
 
-
+gem 'refinerycms-blog', '~> 2.0.0'
 gem 'refinerycms-events', :path => 'vendor/extensions'
