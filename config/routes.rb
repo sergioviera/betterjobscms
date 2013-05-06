@@ -11,7 +11,9 @@ Rickrockstar::Application.routes.draw do
   match 'jobs' => 'jobs#index'
   match 'search' => 'jobs#index'
 
+  match 'style' => 'static#newStyle'
   mount Refinery::Core::Engine, :at => '/'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
