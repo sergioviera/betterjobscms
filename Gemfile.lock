@@ -137,6 +137,7 @@ GEM
     mime-types (1.23)
     multi_json (1.7.2)
     multi_xml (0.5.3)
+    mysql (2.9.1)
     net-scp (1.1.0)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.1)
@@ -148,7 +149,6 @@ GEM
     paper_trail (2.7.1)
       activerecord (~> 3.0)
       railties (~> 3.0)
-    pg (0.15.1)
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -234,7 +234,7 @@ DEPENDENCIES
   httparty (~> 0.10.2)
   jquery-rails (~> 2.0.0)
   multi_xml (~> 0.5.3)
-  pg
+  mysql
   rails (= 3.2.13)
   refinerycms (~> 2.0.0)!
   refinerycms-blog (~> 2.0.0)
