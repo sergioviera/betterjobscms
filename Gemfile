@@ -57,3 +57,4 @@ gem 'refinerycms-blog', '~> 2.0.0'
 gem 'refinerycms-events', :path => 'vendor/extensions'
 
 gem 'capistrano'
+gem 'rvm-capistrano'
