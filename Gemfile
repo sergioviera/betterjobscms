@@ -58,3 +58,4 @@ gem 'refinerycms-events', :path => 'vendor/extensions'
 
 gem 'capistrano'
 gem 'rvm-capistrano'
+gem 'therubyracer', require: "v8"

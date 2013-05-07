@@ -1,3 +1,6 @@
+# RVM bootstrap
+# $:.unshift(File.expand_path("~/.rvm/lib"))
+# $:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 require 'rvm/capistrano'
 require "bundler/capistrano"
 set :rvm_ruby_string, '1.9.3'
@@ -16,11 +19,11 @@ role :db,  "50.17.6.194", :primary => true
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
-#if ENV["development"]
-#  ssh_options[:keys] = "/home/sergio/RoR/blogapp.pem"
-#else
+if ENV["development"]
   ssh_options[:keys] = "/home/sergio/RoR/blogapp.pem"
-#end
+else
+  ssh_options[:keys] = "/home/sergio/RoR/blogapp.pem"
+end
   
 # ssh_options[:keys] = "/home/ubuntu/.ssh/config"
 # ssh_options[:keys] = "/home/ubuntu/mobileapply.pem"
@@ -53,13 +56,14 @@ namespace :deploy do
     # Do nothing.
   end
 
-#  desc "Restart Application"
-#  task :restart, :roles => :app do
-#    run "touch #{current_path}/tmp/restart.txt"
-#  end
-  task :restart, :roles => :app, :except => { :no_release => true } do
-    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+  desc "Restart Application"
+  task :restart, :roles => :app do
+    run "touch #{current_path}/tmp/restart.txt"
   end
+
+#  task :restart, :roles => :app, :except => { :no_release => true } do
+#    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+#  end
 
   desc "Symlink shared resources on each release"
   task :symlink_shared, :roles => :app do
@@ -119,3 +123,34 @@ namespace :foreman do
   end
 end
 
+namespace :db do
+  desc "Create Production Database"
+  task :create do
+    puts "\n\n=== Creating the Production Database! ===\n\n"
+    run "cd #{current_path}; rake db:create RAILS_ENV=production"
+  end
+
+  desc "Migrate Production Database"
+  task :migrate do
+    puts "\n\n=== Migrating the Production Database! ===\n\n"
+    run "cd #{current_path}; rake db:migrate RAILS_ENV=production"
+  end
+
+  desc "Resets the Production Database"
+  task :migrate_reset do
+    puts "\n\n=== Resetting the Production Database! ===\n\n"
+    run "cd #{current_path}; rake db:migrate:reset RAILS_ENV=production"
+  end
+
+  desc "Destroys Production Database"
+  task :drop do
+    puts "\n\n=== Destroying the Production Database! ===\n\n"
+    run "cd #{current_path}; rake db:drop RAILS_ENV=production"
+  end
+
+  desc "Populates the Production Database"
+  task :seed do
+    puts "\n\n=== Populating the Production Database! ===\n\n"
+    run "cd #{current_path}; rake db:seed RAILS_ENV=production"
+  end
+end
