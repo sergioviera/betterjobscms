@@ -230,6 +230,7 @@ PLATFORMS
 DEPENDENCIES
   capistrano
   coffee-rails (~> 3.2.1)
+  execjs
   httparty (~> 0.10.2)
   jquery-rails (~> 2.0.0)
   multi_xml (~> 0.5.3)
