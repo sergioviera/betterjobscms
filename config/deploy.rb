@@ -19,11 +19,7 @@ role :db,  "50.17.6.194", :primary => true
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
-if ENV["development"]
-  ssh_options[:keys] = "/home/sergio/RoR/blogapp.pem"
-else
-  ssh_options[:keys] = "/home/sergio/RoR/blogapp.pem"
-end
+ssh_options[:keys] = "/home/sergio/RoR/blogapp.pem"
   
 # ssh_options[:keys] = "/home/ubuntu/.ssh/config"
 # ssh_options[:keys] = "/home/ubuntu/mobileapply.pem"
