@@ -66,6 +66,6 @@ module Rickrockstar
     config.assets.version = '1.0'
 
     # http://refinerycms.com/guides/heroku
-    config.assets.initialize_on_precompile = true
+    #config.assets.initialize_on_precompile = true
   end
 end

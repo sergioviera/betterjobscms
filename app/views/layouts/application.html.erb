@@ -6,13 +6,40 @@
     <%= site_bar -%>
     <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
 
-    <div id="wraptop2" style="height:100px">
+    <div id="wraptop2" style="/*height:100px*/">
       <div class="wrap">
         <%= render '/refinery/header' -%>
+        <%= render '/jobs/searchform' -%>
         <%= yield %>
       </div>
       <%= render '/refinery/footer' -%>
     </div>
+    <%= render '/jobs/countryselector' %>
     <%= render '/refinery/javascripts' %>
+    <script type="text/javascript">
+$(document).ready(function() {
+  $( "#location" ).autocomplete({
+    source: function(request, response){  
+      $.ajax({
+                type: "GET",
+                url: "http://dev.betterjobs.com:7777/OrionWeb/doSuggestLocations",
+                data: {
+                    term: request.term,
+                    country: $('#country-options').val()
+                },                dataType: "jsonp",
+                crossDomain: true,
+                cache: false,
+        success: function(data){
+          response( data.suggestions );
+        }
+      });
+    },
+    delay:0,
+    autoFocus:true
+  });
+
+});
+
+    </script>
   </body>
 </html>

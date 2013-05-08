@@ -9,8 +9,10 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require fancybox
  *= require_tree .
  */
+
 .body-blog-content,
 #body_content{
 	margin:auto;
@@ -35,7 +37,7 @@
 }
 .body-blog-content #body_content{
 	float: left;
-	width: 70%;
+	width: 60% !important;
 }
 
 #body_content_left{

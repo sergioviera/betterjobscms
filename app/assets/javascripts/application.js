@@ -13,7 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require fancybox
 
+$(document).ready(function() {
 	$( "#location" ).autocomplete({
 		source: function(request, response){	
 			$.ajax({
@@ -34,6 +36,13 @@
 		autoFocus:true
 	});
 
+    $("#country-selector").fancybox({
+                'titlePosition'     : 'inside',
+                'transitionIn'      : 'fade',
+                'transitionOut'     : 'none',
+                'hideOnContentClick': true
+    });
+});
 /*$(document).ready(function(){
     $("#result").html( "starting "+new Date() );
 

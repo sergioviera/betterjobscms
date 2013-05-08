@@ -18,7 +18,7 @@ end
 
 # Gems used only for assets and not required
 # in production environments by default.
-#group :assets do
+group :assets do
   gem 'sass-rails',   '~> 3.2.6'
   gem 'coffee-rails', '~> 3.2.2'
 
@@ -26,9 +26,11 @@ end
   gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 2.0.1'
-#end
+end
 
 gem 'jquery-rails', '~> 2.0.0'
+gem 'fancybox-rails'
+
 gem 'httparty', '~> 0.10.2'
 gem 'multi_xml', '~> 0.5.3' 
 
