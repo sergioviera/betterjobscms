@@ -29,7 +29,6 @@ group :assets do
 end
 
 gem 'jquery-rails', '~> 2.0.0'
-gem 'fancybox-rails'
 
 gem 'httparty', '~> 0.10.2'
 gem 'multi_xml', '~> 0.5.3' 

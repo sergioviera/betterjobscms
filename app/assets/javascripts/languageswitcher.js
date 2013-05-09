@@ -30,14 +30,6 @@ $(document).ready(function() {
 			$("#location").val("");
 		}
 	});
-
-	$("#country-selector").fancybox({
-                'titlePosition'     : 'inside',
-                'transitionIn'      : 'fade',
-                'transitionOut'     : 'none',
-                'hideOnContentClick': true
-    });
-
 });
 
 // actual function to transform select to definition list

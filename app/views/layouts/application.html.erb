@@ -6,10 +6,9 @@
     <%= site_bar -%>
     <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
 
-    <div id="wraptop2" style="/*height:100px*/">
+    <div id="wraptop2" style="height:100px">
       <div class="wrap">
         <%= render '/refinery/header' -%>
-        <%= render '/jobs/searchform' -%>
         <%= yield %>
       </div>
       <%= render '/refinery/footer' -%>

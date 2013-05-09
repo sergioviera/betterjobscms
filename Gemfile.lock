@@ -112,8 +112,6 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    fancybox-rails (0.2.1)
-      railties (>= 3.1.0)
     filters_spam (0.3)
     friendly_id (4.0.9)
     globalize3 (0.3.0)
@@ -233,7 +231,6 @@ DEPENDENCIES
   capistrano
   coffee-rails (~> 3.2.2)
   execjs
-  fancybox-rails
   httparty (~> 0.10.2)
   jquery-rails (~> 2.0.0)
   multi_xml (~> 0.5.3)

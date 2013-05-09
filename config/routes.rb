@@ -12,6 +12,7 @@ Rickrockstar::Application.routes.draw do
   match 'search' => 'jobs#index'
 
   match 'style' => 'static#newStyle'
+  match 'browse-jobs' => 'browse_jobs#index'
   mount Refinery::Core::Engine, :at => '/'
 
 

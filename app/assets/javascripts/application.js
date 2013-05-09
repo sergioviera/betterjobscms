@@ -10,10 +10,7 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require jquery
-//= require jquery_ujs
 //= require_tree .
-//= require fancybox
 
 $(document).ready(function() {
 	$( "#location" ).autocomplete({
@@ -35,13 +32,6 @@ $(document).ready(function() {
 		delay:0,
 		autoFocus:true
 	});
-
-    $("#country-selector").fancybox({
-                'titlePosition'     : 'inside',
-                'transitionIn'      : 'fade',
-                'transitionOut'     : 'none',
-                'hideOnContentClick': true
-    });
 });
 /*$(document).ready(function(){
     $("#result").html( "starting "+new Date() );
