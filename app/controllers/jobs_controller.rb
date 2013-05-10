@@ -21,7 +21,7 @@ class JobsController < ApplicationController
       when 404
         @error = "O noes not found!"
       when 500...600
-        @error = "ZOMG ERROR #{response.code}"
+        @error = "ERROR #{response.code}"
     end
 
     if params[:k] && params[:l]

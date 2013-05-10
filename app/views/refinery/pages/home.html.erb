@@ -1,4 +1,6 @@
 <style type="text/css">#wraptop2{height:220px !important}</style>
 <%= render '/jobs/searchform' %>
-<div><a href=""><%= link_to :blowse-jobs %></div>
+<span style="float:right;font-size:14pt;margin-right: 109px;margin-top: -22px;padding: 5px 10px;background: whitesmoke;border-radius: 5px 5px 0 0;">
+	or&nbsp;<%= link_to "Browse Jobs", "browse-jobs", :style => "color:#a50404;" %>
+</span>
 <%= render '/refinery/content_page' %>

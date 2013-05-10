@@ -56,5 +56,16 @@ class JobAPI
     get('/getJob', :query => params)
   end
 
+  def self.get_facets()
+    # initialize default values
+    params = {'DeveloperKey' => '7e389902-c671-4248-b234-728021e753b4',
+      'PerPage' => 1,
+      'usefacets' => true,
+      'CountryCode' => 'US',
+      'nolimitoffacets' => true}
+
+    get('/getJob', :query => params)
+  end
+
 end
 
