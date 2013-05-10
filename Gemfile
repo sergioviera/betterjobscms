@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-
 gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
@@ -9,7 +8,8 @@ group :development, :test do
   gem 'sqlite3'
 end
 group :production do
-  gem 'mysql2', '~> 0.3.11'
+#  gem 'mysql2', '~> 0.3.11'
+	gem 'pg'
 
   gem 'execjs'
   gem 'therubyracer', :platform => :ruby
