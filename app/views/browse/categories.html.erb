@@ -1,0 +1,62 @@
+<div class="main" style="width: 700px;">
+<div class="centerPanel">
+  <div class="browseBody">
+	<h1 style="font-size:14pt">Browse Jobs for <%= params['category'] %> category</h1>
+	<hr style="margin-top:10px;"><br>
+	<div id="categoryDesc"></div>
+	  <table align="left" width="100%">
+	  	<tbody>
+	  	  <tr>
+		    <td><h2 style="font-size:14pt">By Location</h2></td>
+			<td><h2 style="font-size:14pt">By Company</h2></td>
+		  </tr>
+		  <tr>
+			<td width="53%" style="vertical-align:top;">
+			  <ul class="browseList" id="l-"></ul>
+			</td>
+			<td width="53%" style="vertical-align:top;">
+			  <ul class="browseList" id="i-"></ul>
+			</td>
+		  </tr>
+		</tbody>
+	  </table>
+  </div>
+</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $.ajax({
+        type: "GET",
+        url: "<%= SERVICE_CONFIG['ajax_url'] %>/doGetTopByCategory",
+        data: {
+            params: '<%= params['category'] %>'
+        },
+        dataType: "jsonp",
+        crossDomain: true,
+        cache: false,
+        success: function( data ){
+        	showList(data.facets.locations, "l-");
+        	showList(data.facets.companies, "i-");
+        }
+    });
+
+});
+
+function showList(list, columnName){
+	for(var obj in list){
+		addItemTo(list[obj], columnName );
+	}
+}
+
+function addItemTo( dataElem, domId ){
+	jQuery('<a/>',{
+        text: dataElem.description + ' (' + dataElem.count + ')',
+        href: '<%= SERVICE_CONFIG['ajax_url'] %>/jobs/'+domId+dataElem.value+'/cat-<%= params['category'] %>',
+        class: 'joblink-list'
+    }).appendTo(jQuery('<li/>',{
+    	class: 'browseItem'
+    }).appendTo( "#"+domId ));
+
+}
+</script>

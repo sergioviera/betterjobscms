@@ -10074,25 +10074,6 @@ a.rotate(null)}:function(){t=c.selected;h()});if(b){this.element.bind("tabsshow"
 
 
 
-	$( "#location" ).autocomplete({
-		source: function(request, response){	
-			$.ajax({
-                type: "GET",
-                url: "http://dev.betterjobs.com:7777/OrionWeb/doSuggestLocations",
-                data: {
-                    term: request.term,
-                    country: $('#country-options').val()
-                },                dataType: "jsonp",
-                crossDomain: true,
-                cache: false,
-				success: function(data){
-					response( data.suggestions );
-				}
-			});
-		},
-		delay:0,
-		autoFocus:true
-	});
 
 /*$(document).ready(function(){
     $("#result").html( "starting "+new Date() );

@@ -1,0 +1,68 @@
+// Place all the styles related to the Browse-jobs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*
+*= require_tree
+*= require_self
+*/
+
+div.searchForm{
+	padding-left:30px;
+}
+
+div.centerPanel{
+ 	clear:both;
+ 	float:left;
+/* 	width:1080px;*/
+ 	min-height:300px;
+ 	padding: 0px 170px;
+}
+
+ul.browseList{
+	padding-left: 0px;
+}
+
+a.popularLink {
+	text-decoration:none; 
+	color:black; 
+	font-size:11pt;
+}
+
+a.popularLink:hover {
+	text-decoration:underline;
+}
+
+div.popularLink {
+	background:#d2d0d0;
+	opacity:0.7; 
+	height:2em;
+	vertical-align:middle;
+	width: 90%;
+	padding-top: 1em;
+	padding-left: 10px;
+	min-width:15em;
+
+	-moz-border-radius:1em;
+	-webkit-border-radius: 1em;
+	-khtml-border-radius: 1em;
+	
+	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+	-moz-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+	box-shadow: 0 3px 6px rgba(0,0,0,.5);
+}
+
+div.popularLink:hover {
+	text-decoration:underline;
+	opacity:1;
+	cursor:pointer;
+}
+
+div.browseGroup{
+	border-top: thin solid;
+    clear: both;
+    float: left;
+    margin-top: 20px;
+    padding: 5px 15px;
+    width: 100%;
+}

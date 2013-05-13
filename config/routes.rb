@@ -12,6 +12,15 @@ Rickrockstar::Application.routes.draw do
   match 'search' => 'jobs#index'
 
   match 'style' => 'static#newStyle'
+  match 'browse-jobs' => 'browse_jobs#index'
+
+  #contact us
+  match 'contactUs' => 'contactUs#new', :as => 'contactUs', :via => :get
+  match 'contactUs' => 'contactUs#create', :as => 'contactUs', :via => :post
+
+  #browse category
+  match 'cat-:category' => 'browse#categories'
+
   mount Refinery::Core::Engine, :at => '/'
 
 

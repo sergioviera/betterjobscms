@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-
 gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
@@ -9,10 +8,11 @@ group :development, :test do
   gem 'sqlite3'
 end
 group :production do
- gem 'mysql2', '~> 0.3.11'
+#  gem 'mysql2', '~> 0.3.11'
+	gem 'pg'
 
- gem 'execjs'
- gem 'therubyracer'
+  gem 'execjs'
+  gem 'therubyracer', :platform => :ruby
 end
 
 
@@ -23,12 +23,13 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.2'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer', :platforms => :ruby
+  #gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 2.0.1'
 end
 
 gem 'jquery-rails', '~> 2.0.0'
+
 gem 'httparty', '~> 0.10.2'
 gem 'multi_xml', '~> 0.5.3' 
 

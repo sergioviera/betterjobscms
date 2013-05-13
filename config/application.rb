@@ -65,6 +65,20 @@ module Rickrockstar
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
+    config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :domain               => "gmail.com",
+      :user_name            => "codigoaustraltest@gmail.com",
+      :password             => "testing01",
+      :authentication       => :plain,
+      :enable_starttls_auto => true
+    }
+
+    config.action_mailer.default_url_options = {
+      :host => "gmail.com"
+    }
+
     # http://refinerycms.com/guides/heroku
     config.assets.initialize_on_precompile = true
   end

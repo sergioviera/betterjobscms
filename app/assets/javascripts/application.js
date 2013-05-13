@@ -10,10 +10,9 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require jquery
-//= require jquery_ujs
 //= require_tree .
 
+$(document).ready(function() {
 	$( "#location" ).autocomplete({
 		source: function(request, response){	
 			$.ajax({
@@ -33,7 +32,7 @@
 		delay:0,
 		autoFocus:true
 	});
-
+});
 /*$(document).ready(function(){
     $("#result").html( "starting "+new Date() );
 

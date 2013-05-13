@@ -1,3 +1,11 @@
+div.browseGroup{
+	border-top: thin solid;
+    clear: both;
+    float: left;
+    margin-top: 20px;
+    padding: 5px 15px;
+    width: 100%;
+}
 *{margin:0; padding:0}
 header{display:block;height:250px;width:600px;margin:0 auto}
 header .logo{margin:0px 25px;width:240px;height:104px}

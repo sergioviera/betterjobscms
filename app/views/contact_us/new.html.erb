@@ -1,0 +1,36 @@
+<div id="wraptop2" style="height:100px;">
+    <div class="wrap">
+      <%= render 'jobs/header' %>
+      <div class="main">
+    <div class="centerPanel" style="clear:both;padding-left:100px;">
+      <h2>Contact Us</h2> 
+      <span class="subtitle-page" style="float:left;clear:both;font-size:12px;line-height:1.2em;margin-top:0;">Your comments help us build a better web site to serve your educational needs. Please let us know if you have any <br>questions or concerns and we’ll get back with you within 2 business days.</span>
+      <div style="float:left; clear:both; padding:20px 0px 20px;">
+      <%= form_for @message, :url => contactUs_path do |form| %>
+          <div class="field">
+            <%= form.label :name %><br>
+            <%= form.text_field :name %>
+          </div>
+          <br><br>
+          <div class="field">
+            <%= form.label :email %><br>
+            <%= form.text_field :email %>
+          </div>
+          <br><br>
+          <div class="field">
+            <%= form.label :subject %><br>
+            <%= form.text_field :subject %>
+          </div>
+          <br><br>
+          <div class="field">
+            <%= form.label :comments %><br>
+            <%= form.text_area :comments %>
+          </div>
+
+          <%= form.submit "Send", :id => "contactSubmit" %>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
