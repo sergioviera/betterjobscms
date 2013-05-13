@@ -11,9 +11,9 @@ require "bundler/capistrano"
 load 'deploy/assets'
 # main details
 set :application, "blogapp"
-role :web, "50.17.6.194"
-role :app, "50.17.6.194"
-role :db,  "50.17.6.194", :primary => true
+role :web, "ec2-50-17-6-194.compute-1.amazonaws.com"
+role :app, "ec2-50-17-6-194.compute-1.amazonaws.com"
+role :db,  "ec2-50-17-6-194.compute-1.amazonaws.com", :primary => true
 
 # server details
 default_run_options[:pty] = true
@@ -22,7 +22,7 @@ ssh_options[:forward_agent] = true
 if ENV["development"]
   ssh_options[:keys] = "/home/sergio/RoR/blogapp.pem"
 else
-  ssh_options[:keys] = "/home/sergio/RoR/blogapp.pem"
+  ssh_options[:keys] = "/Users/pramachandran/CBWorkspace/Projects/git/blogapp.pem"
 end
   
 # ssh_options[:keys] = "/home/ubuntu/.ssh/config"
@@ -35,7 +35,7 @@ set :use_sudo, false
 # repo details
 set :scm, :git
 set :scm_username, "ubuntu"
-set :repository, "ssh://ubuntu@50.17.6.194/home/ubuntu/blogapp/.git/"
+set :repository, "ssh://ubuntu@ec2-50-17-6-194.compute-1.amazonaws.com/home/ubuntu/PraveshTest/blogapp.git"
 # set :local_repository, "/home/ubuntu/MobileApplyTest.git/"
 set :branch, "master"
 # set :git_enable_submodules, 1
