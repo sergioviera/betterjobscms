@@ -1,0 +1,4 @@
+
+development:
+ajax_url: http://dev.betterjobs.com:7777/OrionWeb
+#ajax_url: http://www.betterjobs.com

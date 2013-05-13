@@ -18,6 +18,9 @@ Rickrockstar::Application.routes.draw do
   match 'contactUs' => 'contactUs#new', :as => 'contactUs', :via => :get
   match 'contactUs' => 'contactUs#create', :as => 'contactUs', :via => :post
 
+  #browse category
+  match 'cat-:category' => 'browse#categories'
+
   mount Refinery::Core::Engine, :at => '/'
 
 

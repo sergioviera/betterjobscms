@@ -117,9 +117,9 @@
 $(document).ready(function() {
     $.ajax({
         type: "GET",
-        url: "http://dev.betterjobs.com:7777/OrionWeb/doGetFacetSearch",
+        url: "<%= SERVICE_CONFIG['ajax_url'] %>/doGetFacetSearch",
         data: {
-            facetName: 'jobstate,subcat_top'
+            params: 'jobstate,subcat_top'
         },
         dataType: "jsonp",
         crossDomain: true,
@@ -147,7 +147,7 @@ function showList(list, columnName, columns){
 function addItemTo( dataElem, domId, colNum ){
 	jQuery('<a/>',{
         text: dataElem.description + ' (' + dataElem.count + ')',
-        href: 'http://www.betterjobs.com/'+domId+dataElem.description,
+        href: '<%= SERVICE_CONFIG['ajax_url'] %>/'+domId+dataElem.description,
         class: 'joblink-list'
     }).appendTo(jQuery('<li/>',{
     	class: 'browseItem'
