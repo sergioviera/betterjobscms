@@ -228,7 +228,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capistrano
   coffee-rails (~> 3.2.2)
   execjs
   httparty (~> 0.10.2)

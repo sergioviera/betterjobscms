@@ -10,7 +10,7 @@ end
 group :production do
 #  gem 'mysql2', '~> 0.3.11'
 	gem 'pg'
-
+  gem 'sqlite3'
   gem 'execjs'
   gem 'therubyracer', :platform => :ruby
 end
@@ -61,5 +61,6 @@ gem 'refinerycms-i18n', '~> 2.0.0'
 gem 'refinerycms-blog', '~> 2.0.0'
 gem 'refinerycms-events', :path => 'vendor/extensions'
 
-gem 'capistrano'
+
+# gem 'capistrano'
 gem 'rvm-capistrano'
